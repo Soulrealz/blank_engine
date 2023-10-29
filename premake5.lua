@@ -17,8 +17,8 @@ workspace "BlankSpace"
         location "%{wks.location}/BlankEngine"
         files
         {
-            "%{prj.location}/headers/**.h", "%{prj.location}/headers/**.hpp", "%{prj.location}/headers/**.hh",
-            "%{prj.location}/comp/**.c", "%{prj.location}/cpp/**.cpp", "%{prj.location}/cpp/**.cc",
+            "%{prj.location}/**.h", "%{prj.location}/**.hpp", "%{prj.location}/**.hh",
+            "%{prj.location}/**.c", "%{prj.location}/**.cpp", "%{prj.location}/**.cc",
             "%{prj.location}/**.lua", "%{prj.location}/**.txt", "%{prj.location}/**.ini", "%{prj.location}/**.md",
         }
 
