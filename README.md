@@ -37,6 +37,7 @@ Automatically:
 
 Manually:
 > conan install conanfile.py --build missing --output-folder=./dependencies --settings=build_type=Debug
+> conan install conanfile.py --build missing --output-folder=./dependencies --settings=build_type=Release
 
 If the above command is throwing the following error in gitbash run it again but in CMD
 > ERROR: fmt/10.0.0: Error in build() method, line 94
