@@ -7,7 +7,7 @@
 Go to this site and click on Windows under Pre-Built Binaries
 > https://premake.github.io/download 
 
-Once you download the zip open it and get premake5.exe and save it in your bin folder in the project root directory.
+Once you download the zip open it and get premake5.exe and save it in bin folder(create it if it doesn't exist) in the project root directory.
 
 ### 2. Install CMake (necessary for some Conan packages)
 
@@ -30,9 +30,16 @@ Now open the directory in which your profile was saved.
 Edit cppstd from 14 to 20
 > compiler.cppstd=14
 
-### 4. Download Packages
+### 4. Download Packages and Build Project
 
+Automatically:
+>py build_project.py
+
+Manually:
 > conan install conanfile.py --build missing --output-folder=./dependencies --settings=build_type=Debug
 
 If the above command is throwing the following error in gitbash run it again but in CMD
 > ERROR: fmt/10.0.0: Error in build() method, line 94
+
+Then to build the project run
+> ./bin/premake5.exe vs2019
