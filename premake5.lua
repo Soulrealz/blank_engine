@@ -1,3 +1,5 @@
+include "dependencies/conandeps.premake5.lua"
+
 workspace "BlankSpace"
     configurations { "Debug", "Release"} --"Dist"?
     architecture "x86_64"
@@ -22,9 +24,8 @@ workspace "BlankSpace"
             "%{prj.location}/**.lua", "%{prj.location}/**.txt", "%{prj.location}/**.ini", "%{prj.location}/**.md",
         }
 
-        --filter must be at the end always
         filter "configurations:Debug"
-            defines {"DEBUG, _DEBUG"}
+            defines {"DEBUG"}
             symbols "On"
         filter {}    
         
@@ -33,3 +34,4 @@ workspace "BlankSpace"
             symbols "On"
         filter {}
 
+        conan_setup()

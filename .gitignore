@@ -41,3 +41,6 @@
 # Binaries
 bin/
 build/
+
+# Conan
+dependencies/
