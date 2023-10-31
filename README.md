@@ -30,16 +30,18 @@ Now open the directory in which your profile was saved.
 Edit cppstd from 14 to 20
 > compiler.cppstd=14
 
+Restart your gitbash or whatever shell you are using so that it can detect CMake for the next step
+
 ### 4. Download Packages and Build Project
 
 Automatically:
->py build_project.py
+    >py build_project.py
 
 Manually:
-> conan install conanfile.py --build missing --output-folder=./dependencies --settings=build_type=Debug
+    > conan install conanfile.py --build missing --output-folder=./dependencies --settings=build_type=Debug
 
-If the above command is throwing the following error in gitbash run it again but in CMD
-> ERROR: fmt/10.0.0: Error in build() method, line 94
+    If the above command is throwing the following error in gitbash run it again but in CMD
+    > ERROR: fmt/10.0.0: Error in build() method, line 94
 
-Then to build the project run
-> ./bin/premake5.exe vs2019
+    Then to build the project run
+    > ./bin/premake5.exe vs2019
