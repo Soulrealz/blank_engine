@@ -2,10 +2,12 @@
 
 namespace Blank
 {
+	// Init logger
 	std::shared_ptr<spdlog::logger> Logger::m_logger;
 
 	void Logger::init()
 	{	
+		//std::shared_ptr<spdlog::logger> Logger::m_logger;
 		auto errorLogSink = std::make_shared<spdlog::sinks::basic_file_sink_mt>("error.log");
 		errorLogSink->set_level(spdlog::level::warn);
 		auto debugLogSink = std::make_shared<spdlog::sinks::basic_file_sink_mt>("debug.log");
