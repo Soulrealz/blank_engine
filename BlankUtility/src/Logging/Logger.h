@@ -23,7 +23,7 @@ namespace Blank
 	{
 	public:
 		/*
-		* @dev initializes debug and default loggers
+		* @dev initializes default logger
 		*/
 		static void init();
 
