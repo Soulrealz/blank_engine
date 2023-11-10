@@ -44,3 +44,7 @@ build/
 
 # Conan
 dependencies/
+
+# Logs
+debug.log
+error.log
