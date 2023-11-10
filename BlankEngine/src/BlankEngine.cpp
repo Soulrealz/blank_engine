@@ -1,17 +1,14 @@
 #include <iostream>
 #include "Utility.h"
 
-
-//#define log(x) Blank::Logger:getLogger(x)->....
-
 int main()
 {
     Blank::Logger::init();
 
-    Blank::Logger::getLogger()->log(spdlog::level::trace, "1");
-    Blank::Logger::getLogger()->log(spdlog::level::debug, "2");
-    Blank::Logger::getLogger()->log(spdlog::level::info, "3");
-    Blank::Logger::getLogger()->log(spdlog::level::warn, "4");
-    Blank::Logger::getLogger()->log(spdlog::level::err, "5");
-    Blank::Logger::getLogger()->log(spdlog::level::critical, "6");
+    BLANK_ENGINE_TRACE("1");
+    BLANK_ENGINE_DEBUG("2");
+    BLANK_ENGINE_INFO("3");
+    BLANK_ENGINE_WARN("4");
+    BLANK_ENGINE_ERROR("5");
+    BLANK_ENGINE_CRITICAL("6");
 }
