@@ -36,16 +36,40 @@ Restart your gitbash or whatever shell you are using so that it can detect CMake
 
 Automatically:
 
-    >py build_project.py
+    py build_project.py
 
 Manually:
 
-    > conan install conanfile.py --build missing --output-folder=./dependencies --settings=build_type=Debug
+    conan install conanfile.py --build missing --output-folder=./dependencies --settings=build_type=Debug
     
-    > conan install conanfile.py --build missing --output-folder=./dependencies --settings=build_type=Release
+    conan install conanfile.py --build missing --output-folder=./dependencies --settings=build_type=Release
 
-    If the above command is throwing the following error in gitbash run it again but in CMD
-    > ERROR: fmt/10.0.0: Error in build() method, line 94
+If the above command is throwing the following error in gitbash run it again but in CMD
+    
+    ERROR: fmt/10.0.0: Error in build() method, line 94
 
-    Then to build the project run
-    > ./bin/premake5.exe vs2019
+Then to build the project run
+    
+    ./bin/premake5.exe vs2019
+
+### 5. Cppcheck
+
+Download ver 2.12.1 (zip)
+> https://github.com/danmar/cppcheck/releases
+
+Extract in a folder of your choosing (not in this project) enter the root directory and execute
+
+    mkdir build
+    cd build
+    cmake ..
+    cmake --build .
+
+Add cppcheck to path in system environment variables
+
+    path_to_folder\cppcheck-2.12.1\cppcheck-2.12.1\build\bin\Debug
+
+To use cppcheck run
+
+    py analyze.py path/to/folder OR py analyze.py path/to/cppFile
+
+If no path is provided the default location is "." or the root project directory.

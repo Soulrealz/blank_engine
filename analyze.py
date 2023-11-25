@@ -1,4 +1,5 @@
 import subprocess
+import sys
 
 def RunStaticAnalysis(location):
     subprocess.run((
@@ -8,4 +9,7 @@ def RunStaticAnalysis(location):
   
 
 if __name__ == "__main__":
-    RunStaticAnalysis(".")
+    if len(sys.argv) != 2:
+        location = "."
+    else: location = sys.argv[1]
+    RunStaticAnalysis(location)
