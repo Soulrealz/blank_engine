@@ -48,3 +48,9 @@ dependencies/
 # Logs
 debug.log
 error.log
+
+# Cppcheck
+analysis_cache/files.txt
+analysis_cache/*.a1
+analysis_cache/*.s1
+analysis_cache/*.snalyzerinfo
