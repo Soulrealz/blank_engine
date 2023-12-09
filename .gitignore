@@ -30,3 +30,27 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+
+# Binaries
+bin/
+build/
+
+# Conan
+dependencies/
+
+# Logs
+debug.log
+error.log
+
+# Cppcheck
+analysis_cache/files.txt
+analysis_cache/*.a1
+analysis_cache/*.s1
+analysis_cache/*.snalyzerinfo
